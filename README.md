@@ -57,6 +57,8 @@ Scripts to create database schema: `src/DataBaseMigrations`
 | Version | Description                                   |
 | --------| --------------------------------------------- |
 | 001     | Create Database                               |
-| 002     | Create Users Table                            |
-|         |                                               |
+| 002     | Create Countries Table                        |
+| 003     | Create Users Table                            |
+| 004     | Create Place Table                            |
+| 005     | Create Review Table                           |
 # MPC
