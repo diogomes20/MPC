@@ -1,0 +1,194 @@
+﻿namespace Mpc.WinFormsIoC.Presentation
+{
+    partial class FrmMain
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.userDtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.menuMain = new System.Windows.Forms.MenuStrip();
+            this.menuMainGeneral = new System.Windows.Forms.ToolStripMenuItem();
+            this.placesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reviewsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuMainConfiguration = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuMainConfigurationCountries = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuMainConfigurationUsers = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusMain = new System.Windows.Forms.StatusStrip();
+            this.StatusProgressBar = new System.Windows.Forms.ToolStripProgressBar();
+            this.statusUserLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusUserName = new System.Windows.Forms.ToolStripStatusLabel();
+            this.BtnLog = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.userDtoBindingSource)).BeginInit();
+            this.menuMain.SuspendLayout();
+            this.statusMain.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // menuMain
+            // 
+            this.menuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuMainGeneral,
+            this.menuMainConfiguration});
+            this.menuMain.Location = new System.Drawing.Point(0, 0);
+            this.menuMain.Name = "menuMain";
+            this.menuMain.Size = new System.Drawing.Size(663, 24);
+            this.menuMain.TabIndex = 1;
+            this.menuMain.Text = "menuStrip1";
+            // 
+            // menuMainGeneral
+            // 
+            this.menuMainGeneral.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.placesToolStripMenuItem,
+            this.reviewsToolStripMenuItem});
+            this.menuMainGeneral.Name = "menuMainGeneral";
+            this.menuMainGeneral.Size = new System.Drawing.Size(107, 20);
+            this.menuMainGeneral.Text = "Mpc Application";
+            // 
+            // placesToolStripMenuItem
+            // 
+            this.placesToolStripMenuItem.Name = "placesToolStripMenuItem";
+            this.placesToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.placesToolStripMenuItem.Text = "Places";
+            this.placesToolStripMenuItem.Click += new System.EventHandler(this.placesToolStripMenuItem_Click);
+            // 
+            // reviewsToolStripMenuItem
+            // 
+            this.reviewsToolStripMenuItem.Name = "reviewsToolStripMenuItem";
+            this.reviewsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.reviewsToolStripMenuItem.Text = "Reviews";
+            this.reviewsToolStripMenuItem.Click += new System.EventHandler(this.reviewsToolStripMenuItem_Click);
+            // 
+            // menuMainConfiguration
+            // 
+            this.menuMainConfiguration.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuMainConfigurationCountries,
+            this.menuMainConfigurationUsers});
+            this.menuMainConfiguration.Name = "menuMainConfiguration";
+            this.menuMainConfiguration.Size = new System.Drawing.Size(93, 20);
+            this.menuMainConfiguration.Text = "Configuration";
+            // 
+            // menuMainConfigurationCountries
+            // 
+            this.menuMainConfigurationCountries.Name = "menuMainConfigurationCountries";
+            this.menuMainConfigurationCountries.Size = new System.Drawing.Size(125, 22);
+            this.menuMainConfigurationCountries.Text = "Countries";
+            this.menuMainConfigurationCountries.Click += new System.EventHandler(this.menuMainConfigurationCountries_Click);
+            // 
+            // menuMainConfigurationUsers
+            // 
+            this.menuMainConfigurationUsers.Name = "menuMainConfigurationUsers";
+            this.menuMainConfigurationUsers.Size = new System.Drawing.Size(125, 22);
+            this.menuMainConfigurationUsers.Text = "Users";
+            this.menuMainConfigurationUsers.Click += new System.EventHandler(this.menuMainConfigurationUsers_Click);
+            // 
+            // statusMain
+            // 
+            this.statusMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StatusProgressBar,
+            this.statusUserLabel,
+            this.statusUserName});
+            this.statusMain.Location = new System.Drawing.Point(0, 376);
+            this.statusMain.Name = "statusMain";
+            this.statusMain.Size = new System.Drawing.Size(663, 22);
+            this.statusMain.TabIndex = 2;
+            this.statusMain.Text = "statusStrip1";
+            // 
+            // StatusProgressBar
+            // 
+            this.StatusProgressBar.MarqueeAnimationSpeed = 0;
+            this.StatusProgressBar.Name = "StatusProgressBar";
+            this.StatusProgressBar.Size = new System.Drawing.Size(100, 16);
+            this.StatusProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.StatusProgressBar.Click += new System.EventHandler(this.StatusProgressBar_Click);
+            // 
+            // statusUserLabel
+            // 
+            this.statusUserLabel.Name = "statusUserLabel";
+            this.statusUserLabel.Size = new System.Drawing.Size(33, 17);
+            this.statusUserLabel.Text = "User:";
+            // 
+            // statusUserName
+            // 
+            this.statusUserName.Name = "statusUserName";
+            this.statusUserName.Size = new System.Drawing.Size(0, 17);
+            // 
+            // BtnLog
+            // 
+            this.BtnLog.Location = new System.Drawing.Point(225, 0);
+            this.BtnLog.Name = "BtnLog";
+            this.BtnLog.Size = new System.Drawing.Size(74, 23);
+            this.BtnLog.TabIndex = 4;
+            this.BtnLog.Text = "Login";
+            this.BtnLog.UseVisualStyleBackColor = true;
+            this.BtnLog.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // FrmMain
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(663, 398);
+            this.Controls.Add(this.BtnLog);
+            this.Controls.Add(this.statusMain);
+            this.Controls.Add(this.menuMain);
+            this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuMain;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "FrmMain";
+            this.Text = "Mpc Application";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmMain_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.userDtoBindingSource)).EndInit();
+            this.menuMain.ResumeLayout(false);
+            this.menuMain.PerformLayout();
+            this.statusMain.ResumeLayout(false);
+            this.statusMain.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource userDtoBindingSource;
+        private System.Windows.Forms.MenuStrip menuMain;
+        private System.Windows.Forms.ToolStripMenuItem menuMainGeneral;
+        private System.Windows.Forms.ToolStripMenuItem menuMainConfiguration;
+        private System.Windows.Forms.ToolStripMenuItem menuMainConfigurationUsers;
+        private System.Windows.Forms.StatusStrip statusMain;
+        private System.Windows.Forms.ToolStripStatusLabel statusUserLabel;
+        private System.Windows.Forms.ToolStripStatusLabel statusUserName;
+        public System.Windows.Forms.ToolStripProgressBar StatusProgressBar;
+        private System.Windows.Forms.ToolStripMenuItem menuMainConfigurationCountries;
+        private System.Windows.Forms.ToolStripMenuItem placesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reviewsToolStripMenuItem;
+        private System.Windows.Forms.Button BtnLog;
+    }
+}
+
