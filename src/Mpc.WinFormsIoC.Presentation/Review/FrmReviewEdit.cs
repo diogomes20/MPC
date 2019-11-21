@@ -39,7 +39,7 @@ namespace Mpc.WinFormsIoC.Presentation.Review
                     {
                         var existReview = await _reviewService.FindAsync(ReviewId.Value);
                         FillReview(existReview);
-                        
+                        radRating1.ReadOnly = true;
                         TxtComment.Enabled = false;
                         Btn_Save.Visible = false;
                     }

@@ -183,7 +183,7 @@ namespace Mpc.WinFormsIoC.Presentation.Users
 
             foreach (var item in listUsers)
             {
-                if (username == item.Username)
+                if (username == item.Username && TxtId.Text != item.Id.ToString())
                 {
                     Core.Messages.Information.ShowMessage("Username already exists!", "Users");
                     return false;
