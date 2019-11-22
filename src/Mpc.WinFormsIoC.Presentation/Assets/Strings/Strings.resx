@@ -117,7 +117,166 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="countryDtoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="LblAlias" xml:space="preserve">
+    <value>Alias:</value>
+  </data>
+  <data name="AllFieldsRequired" xml:space="preserve">
+    <value>All fields are required!</value>
+  </data>
+  <data name="Countries" xml:space="preserve">
+    <value>Countries</value>
+  </data>
+  <data name="CountryCreated" xml:space="preserve">
+    <value>Country has been created.</value>
+  </data>
+  <data name="CountryDeleted" xml:space="preserve">
+    <value>Country has been deleted.</value>
+  </data>
+  <data name="CountryUpdated" xml:space="preserve">
+    <value>Country has been updated.</value>
+  </data>
+  <data name="BtnDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="BtnEdit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EmailFieldNotAccepted" xml:space="preserve">
+    <value>Email field was not accepted!</value>
+  </data>
+  <data name="ErrorAddress" xml:space="preserve">
+    <value>\n- Address</value>
+  </data>
+  <data name="ErrorCountry" xml:space="preserve">
+    <value>\n- Country</value>
+  </data>
+  <data name="ErrorEmail" xml:space="preserve">
+    <value>\n- Email</value>
+  </data>
+  <data name="ErrorName" xml:space="preserve">
+    <value>\n- Name</value>
+  </data>
+  <data name="ErrorPassword" xml:space="preserve">
+    <value>\n- Password</value>
+  </data>
+  <data name="ErrorPhone" xml:space="preserve">
+    <value>\n- Phone</value>
+  </data>
+  <data name="ErrorUsername" xml:space="preserve">
+    <value>\n- Username</value>
+  </data>
+  <data name="ErrorWebsite" xml:space="preserve">
+    <value>\n- Website</value>
+  </data>
+  <data name="LblId" xml:space="preserve">
+    <value>Id:</value>
+  </data>
+  <data name="InvalidLogin" xml:space="preserve">
+    <value>Invalid Login</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="LblName" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="BtnNew" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="PhoneNumberIncorrect" xml:space="preserve">
+    <value>Phone Number is incorrect!</value>
+  </data>
+  <data name="PlaceCreated" xml:space="preserve">
+    <value>Place has been created.</value>
+  </data>
+  <data name="Places" xml:space="preserve">
+    <value>Places</value>
+  </data>
+  <data name="PlaceUpdated" xml:space="preserve">
+    <value>Place has been updated.</value>
+  </data>
+  <data name="ReviewCreated" xml:space="preserve">
+    <value>Review has been created.</value>
+  </data>
+  <data name="Reviews" xml:space="preserve">
+    <value>Review</value>
+  </data>
+  <data name="BtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="UserCreated" xml:space="preserve">
+    <value>User has been created.</value>
+  </data>
+  <data name="UserDeleted" xml:space="preserve">
+    <value>User has been deleted.</value>
+  </data>
+  <data name="UsernameExists" xml:space="preserve">
+    <value>Username already exists!</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="UserUpdated" xml:space="preserve">
+    <value>User has been updated.</value>
+  </data>
+  <data name="WebsiteIncorrect" xml:space="preserve">
+    <value>Website is incorrect!</value>
+  </data>
+  <data name="BtnCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="BtnEvaluate" xml:space="preserve">
+    <value>Evaluate</value>
+  </data>
+  <data name="BtnExit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="BtnLogin" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="BtnOpenReview" xml:space="preserve">
+    <value>Open Review</value>
+  </data>
+  <data name="BtnSearch" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="LblAdress" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="LblClassification" xml:space="preserve">
+    <value>Classification:</value>
+  </data>
+  <data name="LblComment" xml:space="preserve">
+    <value>Comment:</value>
+  </data>
+  <data name="LblCountry" xml:space="preserve">
+    <value>Country:</value>
+  </data>
+  <data name="LblEmail" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="LblPassword" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="LblPhone" xml:space="preserve">
+    <value>Phone Nº:</value>
+  </data>
+  <data name="LblUsername" xml:space="preserve">
+    <value>Username:</value>
+  </data>
+  <data name="LblWebsite" xml:space="preserve">
+    <value>Website:</value>
+  </data>
+  <data name="MpcApp" xml:space="preserve">
+    <value>Mpc Application</value>
+  </data>
+  <data name="ViewAllCountries" xml:space="preserve">
+    <value>All Countries</value>
+  </data>
 </root>

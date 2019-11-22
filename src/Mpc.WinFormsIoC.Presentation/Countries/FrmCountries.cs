@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mpc.WinFormsIoC.Application.Dto;
 using Mpc.WinFormsIoC.Application.Services.Countries;
+using Mpc.WinFormsIoC.Presentation.Assets.Strings;
 using Mpc.WinFormsIoC.Presentation.Core;
 using Mpc.WinFormsIoC.Presentation.Core.Helpers;
 
@@ -20,6 +21,10 @@ namespace Mpc.WinFormsIoC.Presentation.Countries
 
         private async void FrmCountryList_Load(object sender, System.EventArgs e)
         {
+            Btn_new.Text = Strings.BtnNew;
+            Btn_Edit.Text = Strings.BtnEdit;
+            Btn_Delete.Text = Strings.BtnDelete;
+
             using (new Core.ShowLoading())
             {
                 var countries = await _countryService.GetAllAsync();
@@ -70,7 +75,7 @@ namespace Mpc.WinFormsIoC.Presentation.Countries
                 if (countrySelected != null)
                 {
                     await _countryService.DeleteAsync(countrySelected);
-                    Core.Messages.Information.ShowMessage("Country deleted", "Countries");
+                    Core.Messages.Information.ShowMessage(Strings.CountryDeleted, Strings.Countries);
                 }
             }
             catch (Exception ex)

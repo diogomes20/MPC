@@ -4,6 +4,7 @@
     using System.Threading.Tasks;
     using System.Windows.Forms;
     using Mpc.WinFormsIoC.Application.Services.Users;
+    using Mpc.WinFormsIoC.Presentation.Assets.Strings;
     using Mpc.WinFormsIoC.Presentation.Config;
     using Mpc.WinFormsIoC.Presentation.Core.Helpers;
     using Mpc.WinFormsIoC.Presentation.Place;
@@ -22,6 +23,15 @@
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
+            menuMainGeneral.Text = Strings.MpcApp;
+            menuMainConfiguration.Text = Strings.Configuration;
+            placesToolStripMenuItem.Text = Strings.Places;
+            reviewsToolStripMenuItem.Text = Strings.Reviews;
+            menuMainConfigurationCountries.Text = Strings.Countries;
+            menuMainConfigurationUsers.Text = Strings.Users;
+            BtnLog.Text = Strings.Login;
+            statusUserLabel.Text = Strings.LblUsername;
+
             menuMainGeneral.Enabled = false;
             menuMainConfiguration.Enabled = false;
 
@@ -81,9 +91,9 @@
         private void IsLogged ()
         {
             if (statusUserName.Text != string.Empty)
-                BtnLog.Text = "Logout";
+                BtnLog.Text = Strings.Logout;
             else
-                BtnLog.Text = "Login";
+                BtnLog.Text = Strings.Login;
         }
         
         private void Login()
@@ -92,7 +102,7 @@
 
             var frmLogin = IoC.GetForm<Users.FrmLogin>();
             frmLogin.ShowDialog();
-            BtnLog.Text = "Logout";
+            BtnLog.Text = Strings.Logout;
         }
 
         private void Logout()
@@ -100,8 +110,9 @@
             menuMainGeneral.Enabled = false;
             menuMainConfiguration.Enabled = false;
             statusUserName.Text = string.Empty;
-            BtnLog.Text = "Login";
+            BtnLog.Text = Strings.Login;
 
+            //Fecha todos os forms exceto o FrmMain e FrmLoading
             for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
             {
                 if (Application.OpenForms[i].Name != "FrmMain" && Application.OpenForms[i].Name != "FrmLoading")

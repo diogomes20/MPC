@@ -1,5 +1,6 @@
 ﻿using Mpc.WinFormsIoC.Application.Dto;
 using Mpc.WinFormsIoC.Application.Services.Place;
+using Mpc.WinFormsIoC.Presentation.Assets.Strings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +29,13 @@ namespace Mpc.WinFormsIoC.Presentation.Place
 
         private async void FrmPlaceEdit_Load(object sender, EventArgs e)
         {
+            LblName.Text = Strings.LblName;
+            LblAddress.Text = Strings.LblAdress;
+            LblPhone.Text = Strings.LblPhone;
+            LblWebsite.Text = Strings.LblWebsite;
+            BtnSave.Text = Strings.BtnSave;
+            BtnCancel.Text = Strings.BtnCancel;
+
             if (!PlaceId.HasValue)
                 return;
             else
@@ -58,7 +66,7 @@ namespace Mpc.WinFormsIoC.Presentation.Place
                     if (validPhone == true && validWebsite == true)
                     {
                         await UpdatePlaceAsync();
-                        Core.Messages.Information.ShowMessage("Place updated", "Places");
+                        Core.Messages.Information.ShowMessage(Strings.PlaceUpdated, Strings.Places);
                         Close();
                     }
                 }
@@ -67,13 +75,13 @@ namespace Mpc.WinFormsIoC.Presentation.Place
                      if (validPhone == true && validWebsite == true)
                      {
                          await SavePlaceAsync();
-                         Core.Messages.Information.ShowMessage("Place created", "Places");
+                         Core.Messages.Information.ShowMessage(Strings.PlaceCreated, Strings.Places);
                          Close();
                      }
                 }
             }
             else
-                Core.Messages.Information.ShowMessage("All fields are required!" + errors, "Places");
+                Core.Messages.Information.ShowMessage(Strings.AllFieldsRequired + errors, Strings.Places);
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -128,7 +136,7 @@ namespace Mpc.WinFormsIoC.Presentation.Place
                 return true;
             else
             {
-                Core.Messages.Information.ShowMessage("Phone Number is incorrect!", "Places");
+                Core.Messages.Information.ShowMessage(Strings.PhoneNumberIncorrect, Strings.Places);
                 return false;
             }
         }
@@ -144,7 +152,7 @@ namespace Mpc.WinFormsIoC.Presentation.Place
                 return true;
             else
             {
-                Core.Messages.Information.ShowMessage("Website is incorrect!", "Places");
+                Core.Messages.Information.ShowMessage(Strings.WebsiteIncorrect, Strings.Places);
                 return false;
             }
 
@@ -155,13 +163,13 @@ namespace Mpc.WinFormsIoC.Presentation.Place
             var errors = string.Empty;
 
             if (name == string.Empty)
-                errors += "\n- Name";
+                errors += Strings.ErrorName;
             if (address == string.Empty)
-                errors += "\n- Address";
+                errors += Strings.ErrorAddress;
             if (phone == string.Empty)
-                errors += "\n- Phone";
+                errors += Strings.ErrorPhone;
             if (website == string.Empty)
-                errors += "\n- Website";
+                errors += Strings.ErrorWebsite;
 
             return errors;
         }

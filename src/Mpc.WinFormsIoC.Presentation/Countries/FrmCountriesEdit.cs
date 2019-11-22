@@ -1,5 +1,6 @@
 ﻿using Mpc.WinFormsIoC.Application.Dto;
 using Mpc.WinFormsIoC.Application.Services.Countries;
+using Mpc.WinFormsIoC.Presentation.Assets.Strings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,11 @@ namespace Mpc.WinFormsIoC.Presentation.Countries
 
         private async void FrmCountriesEdit_Load(object sender, EventArgs e)
         {
+            LblId.Text = Strings.LblId;
+            LblName.Text = Strings.LblName;
+            LblAlias.Text = Strings.LblAlias;
+            Btn_save.Text = Strings.BtnSave;
+
             if (!CountryId.HasValue)
             {
                 return;
@@ -48,12 +54,12 @@ namespace Mpc.WinFormsIoC.Presentation.Countries
             if (CountryId.HasValue)
             {
                 await UpdateCountryAsync();
-                Core.Messages.Information.ShowMessage("Country updated", "Countries");
+                Core.Messages.Information.ShowMessage(Strings.CountryUpdated, Strings.Countries);
             }
             else
             {
                 await SaveCountryAsync();
-                Core.Messages.Information.ShowMessage("Country created", "Countries");
+                Core.Messages.Information.ShowMessage(Strings.CountryCreated, Strings.Countries);
             }
             Close();
         }

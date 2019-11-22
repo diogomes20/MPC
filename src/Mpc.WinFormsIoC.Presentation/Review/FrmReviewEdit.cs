@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using Mpc.WinFormsIoC.Application.Dto;
 using Mpc.WinFormsIoC.Application.Services.Place;
 using Mpc.WinFormsIoC.Application.Services.Reviews;
+using Mpc.WinFormsIoC.Presentation.Assets.Strings;
 
 namespace Mpc.WinFormsIoC.Presentation.Review
 {
@@ -27,6 +28,14 @@ namespace Mpc.WinFormsIoC.Presentation.Review
 
         private async void FrmReviewEdit_Load(object sender, EventArgs e)
         {
+            LblPlace.Text = Strings.Places;
+            LblId.Text = Strings.LblId;
+            LblName.Text = Strings.LblName;
+            LblAddress.Text = Strings.LblAdress;
+            LblClassification.Text = Strings.LblClassification;
+            LblComment.Text = Strings.LblComment;
+            Btn_Save.Text = Strings.BtnSave;
+
             using (new Core.ShowLoading())
             {
                 var existPlace = await _placeService.FindAsync(PlaceId.Value);
@@ -50,7 +59,7 @@ namespace Mpc.WinFormsIoC.Presentation.Review
         private async void Btn_Save_Click(object sender, EventArgs e)
         {
             await SaveReviewAsync();
-            Core.Messages.Information.ShowMessage("Review created", "Review");
+            Core.Messages.Information.ShowMessage(Strings.ReviewCreated, Strings.Reviews);
             Close();
         }
 

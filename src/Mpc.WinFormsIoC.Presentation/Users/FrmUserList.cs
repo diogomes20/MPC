@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using Mpc.WinFormsIoC.Application.Dto;
 using Mpc.WinFormsIoC.Application.Services.Countries;
 using Mpc.WinFormsIoC.Application.Services.Users;
+using Mpc.WinFormsIoC.Presentation.Assets.Strings;
 using Mpc.WinFormsIoC.Presentation.Core;
 using Mpc.WinFormsIoC.Presentation.Core.Helpers;
 
@@ -24,6 +25,11 @@ namespace Mpc.WinFormsIoC.Presentation.Users
 
         private async void FrmUserList_Load(object sender, EventArgs e)
         {
+            BtnSearch.Text = Strings.BtnSearch;
+            BtnNew.Text = Strings.BtnNew;
+            BtnEdit.Text = Strings.BtnEdit;
+            BtnDelete.Text = Strings.BtnDelete;
+
             await ListaPaisesAsync();
             await FillUsersAsync();
         }
@@ -63,7 +69,7 @@ namespace Mpc.WinFormsIoC.Presentation.Users
                 if (userSelected != null)
                 {
                     await _userService.DeleteAsync(userSelected);
-                    Core.Messages.Information.ShowMessage("User deleted", "Users");
+                    Core.Messages.Information.ShowMessage(Strings.UserDeleted, Strings.Users);
                     await FillUsersAsync();
                 }
             }
@@ -106,9 +112,9 @@ namespace Mpc.WinFormsIoC.Presentation.Users
             var lista = await _countryService.GetAllAsync();
             CountryDto country = new CountryDto()
             {
-                Alias = "Todos",
+                Alias = "All",
                 Id = -1,
-                Name = "Todos",
+                Name = Strings.ViewAllCountries,
                 Users = new List<UserDto>()
             };
 
@@ -117,7 +123,7 @@ namespace Mpc.WinFormsIoC.Presentation.Users
             comboBox_Country.DataSource = lista;
             comboBox_Country.DisplayMember = "Name";
             comboBox_Country.ValueMember = "Id";
-            comboBox_Country.SelectedValue = "";
+            comboBox_Country.SelectedValue = string.Empty;
 
             comboBox_Country.DropDownStyle = ComboBoxStyle.DropDownList;
         }
@@ -129,7 +135,7 @@ namespace Mpc.WinFormsIoC.Presentation.Users
 
         }
 
-        private async void comboBox_Country_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox_Country_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

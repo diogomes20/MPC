@@ -31,13 +31,13 @@
             this.TxtId = new System.Windows.Forms.TextBox();
             this.TxtName = new System.Windows.Forms.TextBox();
             this.TxtAddress = new System.Windows.Forms.TextBox();
-            this.Place = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.LblPlace = new System.Windows.Forms.Label();
+            this.LblId = new System.Windows.Forms.Label();
+            this.LblName = new System.Windows.Forms.Label();
+            this.LblAddress = new System.Windows.Forms.Label();
             this.TxtComment = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.LblComment = new System.Windows.Forms.Label();
+            this.LblClassification = new System.Windows.Forms.Label();
             this.Btn_Save = new System.Windows.Forms.Button();
             this.radRating1 = new Telerik.WinControls.UI.RadRating();
             this.ratingStarVisualElement1 = new Telerik.WinControls.UI.RatingStarVisualElement();
@@ -73,42 +73,42 @@
             this.TxtAddress.Size = new System.Drawing.Size(160, 20);
             this.TxtAddress.TabIndex = 2;
             // 
-            // Place
+            // LblPlace
             // 
-            this.Place.AutoSize = true;
-            this.Place.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Place.Location = new System.Drawing.Point(11, 9);
-            this.Place.Name = "Place";
-            this.Place.Size = new System.Drawing.Size(82, 31);
-            this.Place.TabIndex = 3;
-            this.Place.Text = "Place";
+            this.LblPlace.AutoSize = true;
+            this.LblPlace.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPlace.Location = new System.Drawing.Point(11, 9);
+            this.LblPlace.Name = "LblPlace";
+            this.LblPlace.Size = new System.Drawing.Size(82, 31);
+            this.LblPlace.TabIndex = 3;
+            this.LblPlace.Text = "Place";
             // 
-            // label1
+            // LblId
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Id:";
+            this.LblId.AutoSize = true;
+            this.LblId.Location = new System.Drawing.Point(43, 55);
+            this.LblId.Name = "LblId";
+            this.LblId.Size = new System.Drawing.Size(19, 13);
+            this.LblId.TabIndex = 4;
+            this.LblId.Text = "Id:";
             // 
-            // label2
+            // LblName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Name:";
+            this.LblName.AutoSize = true;
+            this.LblName.Location = new System.Drawing.Point(24, 81);
+            this.LblName.Name = "LblName";
+            this.LblName.Size = new System.Drawing.Size(38, 13);
+            this.LblName.TabIndex = 5;
+            this.LblName.Text = "Name:";
             // 
-            // label3
+            // LblAddress
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Address:";
+            this.LblAddress.AutoSize = true;
+            this.LblAddress.Location = new System.Drawing.Point(14, 107);
+            this.LblAddress.Name = "LblAddress";
+            this.LblAddress.Size = new System.Drawing.Size(48, 13);
+            this.LblAddress.TabIndex = 6;
+            this.LblAddress.Text = "Address:";
             // 
             // TxtComment
             // 
@@ -119,23 +119,23 @@
             this.TxtComment.Size = new System.Drawing.Size(352, 87);
             this.TxtComment.TabIndex = 7;
             // 
-            // label4
+            // LblComment
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 212);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Comment:";
+            this.LblComment.AutoSize = true;
+            this.LblComment.Location = new System.Drawing.Point(13, 212);
+            this.LblComment.Name = "LblComment";
+            this.LblComment.Size = new System.Drawing.Size(54, 13);
+            this.LblComment.TabIndex = 8;
+            this.LblComment.Text = "Comment:";
             // 
-            // label5
+            // LblClassification
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 170);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Classification:";
+            this.LblClassification.AutoSize = true;
+            this.LblClassification.Location = new System.Drawing.Point(13, 170);
+            this.LblClassification.Name = "LblClassification";
+            this.LblClassification.Size = new System.Drawing.Size(71, 13);
+            this.LblClassification.TabIndex = 9;
+            this.LblClassification.Text = "Classification:";
             // 
             // Btn_Save
             // 
@@ -205,13 +205,13 @@
             this.ClientSize = new System.Drawing.Size(374, 367);
             this.Controls.Add(this.radRating1);
             this.Controls.Add(this.Btn_Save);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.LblClassification);
+            this.Controls.Add(this.LblComment);
             this.Controls.Add(this.TxtComment);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Place);
+            this.Controls.Add(this.LblAddress);
+            this.Controls.Add(this.LblName);
+            this.Controls.Add(this.LblId);
+            this.Controls.Add(this.LblPlace);
             this.Controls.Add(this.TxtAddress);
             this.Controls.Add(this.TxtName);
             this.Controls.Add(this.TxtId);
@@ -229,13 +229,13 @@
         private System.Windows.Forms.TextBox TxtId;
         private System.Windows.Forms.TextBox TxtName;
         private System.Windows.Forms.TextBox TxtAddress;
-        private System.Windows.Forms.Label Place;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LblPlace;
+        private System.Windows.Forms.Label LblId;
+        private System.Windows.Forms.Label LblName;
+        private System.Windows.Forms.Label LblAddress;
         private System.Windows.Forms.TextBox TxtComment;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LblComment;
+        private System.Windows.Forms.Label LblClassification;
         private System.Windows.Forms.Button Btn_Save;
         private Telerik.WinControls.UI.RadRating radRating1;
         private Telerik.WinControls.UI.RatingStarVisualElement ratingStarVisualElement1;

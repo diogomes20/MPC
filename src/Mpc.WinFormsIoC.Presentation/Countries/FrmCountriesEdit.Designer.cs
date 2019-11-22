@@ -33,7 +33,7 @@
             this.LblId = new System.Windows.Forms.Label();
             this.Btn_save = new System.Windows.Forms.Button();
             this.TxtId = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblAlias = new System.Windows.Forms.Label();
             this.TxtAlias = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -80,14 +80,14 @@
             this.TxtId.Size = new System.Drawing.Size(255, 20);
             this.TxtId.TabIndex = 12;
             // 
-            // label1
+            // LblAlias
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Alias";
+            this.LblAlias.AutoSize = true;
+            this.LblAlias.Location = new System.Drawing.Point(32, 67);
+            this.LblAlias.Name = "LblAlias";
+            this.LblAlias.Size = new System.Drawing.Size(29, 13);
+            this.LblAlias.TabIndex = 14;
+            this.LblAlias.Text = "Alias";
             // 
             // TxtAlias
             // 
@@ -102,7 +102,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(353, 132);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LblAlias);
             this.Controls.Add(this.TxtAlias);
             this.Controls.Add(this.TxtId);
             this.Controls.Add(this.Btn_save);
@@ -125,7 +125,7 @@
         private System.Windows.Forms.Label LblId;
         private System.Windows.Forms.Button Btn_save;
         private System.Windows.Forms.TextBox TxtId;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblAlias;
         private System.Windows.Forms.TextBox TxtAlias;
     }
 }

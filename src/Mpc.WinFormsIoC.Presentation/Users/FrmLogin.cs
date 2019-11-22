@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Mpc.WinFormsIoC.Application.Services.Users;
+using Mpc.WinFormsIoC.Presentation.Assets.Strings;
 
 namespace Mpc.WinFormsIoC.Presentation.Users
 {
@@ -37,13 +38,21 @@ namespace Mpc.WinFormsIoC.Presentation.Users
             }
             else
             {
-                Core.Messages.Information.ShowMessage("Invalid Login", "Login");
+                Core.Messages.Information.ShowMessage(Strings.InvalidLogin, Strings.Login);
             }
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
             System.Environment.Exit(1);
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            LblUsername.Text = Strings.LblUsername;
+            LblPassword.Text = Strings.LblPassword;
+            BtnLogin.Text = Strings.BtnLogin;
+            BtnExit.Text = Strings.BtnExit;
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using Mpc.WinFormsIoC.Application.Dto;
 using Mpc.WinFormsIoC.Application.Services.Countries;
 using Mpc.WinFormsIoC.Application.Services.Users;
+using Mpc.WinFormsIoC.Presentation.Assets.Strings;
 
 namespace Mpc.WinFormsIoC.Presentation.Users
 {
@@ -24,6 +25,14 @@ namespace Mpc.WinFormsIoC.Presentation.Users
 
         private async void FrmUserEdit_Load(object sender, System.EventArgs e)
         {
+            LblId.Text = Strings.LblId;
+            LblName.Text = Strings.LblName;
+            LblEmail.Text = Strings.LblEmail;
+            LblPassword.Text = Strings.LblPassword;
+            LblUsername.Text = Strings.LblUsername;
+            LblPais.Text = Strings.LblCountry;
+            BtnSave.Text = Strings.BtnSave;
+
             if (!UserId.HasValue)
             {
                 await ListaPaisesAsync();
@@ -57,12 +66,12 @@ namespace Mpc.WinFormsIoC.Presentation.Users
                 if (validEmail == true && validUser == true && errors == string.Empty)
                 {
                     await UpdateUserAsync();
-                    Core.Messages.Information.ShowMessage("User updated", "Users");
+                    Core.Messages.Information.ShowMessage(Strings.UserUpdated, Strings.Users);
                     Close();
                 }
                 else
                 {
-                    Core.Messages.Information.ShowMessage("All fields are required!" + errors, "Users");
+                    Core.Messages.Information.ShowMessage(Strings.AllFieldsRequired + errors, Strings.Users);
                 }
             }
             else
@@ -70,12 +79,12 @@ namespace Mpc.WinFormsIoC.Presentation.Users
                 if (validEmail == true && errors == string.Empty)
                 {
                     await SaveUserAsync();
-                    Core.Messages.Information.ShowMessage("User created", "Users");
+                    Core.Messages.Information.ShowMessage(Strings.UserCreated, Strings.Users);
                     Close();
                 }
                 else
                 {
-                    Core.Messages.Information.ShowMessage("All fields are required!" + errors, "Users");
+                    Core.Messages.Information.ShowMessage(Strings.AllFieldsRequired + errors, Strings.Users);
                 }
             }
             
@@ -137,7 +146,7 @@ namespace Mpc.WinFormsIoC.Presentation.Users
                 comboBox1.SelectedValue = existUser.PaisId;
             }
             else
-                comboBox1.SelectedValue = "";
+                comboBox1.SelectedValue = string.Empty;
 
             this.comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
 
@@ -148,15 +157,15 @@ namespace Mpc.WinFormsIoC.Presentation.Users
             var errors = string.Empty;
 
             if (username == string.Empty)
-                errors += "\n- Username";
+                errors += Strings.ErrorUsername;
             if (password == string.Empty)
-                errors += "\n- Password";
+                errors += Strings.ErrorPassword;
             if (name == string.Empty)
-                errors += "\n- Name";
+                errors += Strings.ErrorName;
             if (email == string.Empty)
-                errors += "\n- Email";
+                errors += Strings.ErrorEmail;
             if (country == string.Empty)
-                errors += "\n- Country";
+                errors += Strings.ErrorCountry;
 
             return errors;
         }
@@ -170,7 +179,7 @@ namespace Mpc.WinFormsIoC.Presentation.Users
             }
             catch (FormatException)
             {
-                Core.Messages.Information.ShowMessage("Email field was not accepted!", "Users");
+                Core.Messages.Information.ShowMessage(Strings.EmailFieldNotAccepted, Strings.Users);
                 return false;
             }
             catch (Exception)
@@ -185,7 +194,7 @@ namespace Mpc.WinFormsIoC.Presentation.Users
             {
                 if (username == item.Username && TxtId.Text != item.Id.ToString())
                 {
-                    Core.Messages.Information.ShowMessage("Username already exists!", "Users");
+                    Core.Messages.Information.ShowMessage(Strings.UsernameExists, Strings.Users);
                     return false;
                 }
             }

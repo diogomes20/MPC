@@ -1,5 +1,6 @@
 ﻿using Mpc.WinFormsIoC.Application.Dto;
 using Mpc.WinFormsIoC.Application.Services.Place;
+using Mpc.WinFormsIoC.Presentation.Assets.Strings;
 using Mpc.WinFormsIoC.Presentation.Core;
 using Mpc.WinFormsIoC.Presentation.Core.Helpers;
 using Mpc.WinFormsIoC.Presentation.Review;
@@ -29,6 +30,10 @@ namespace Mpc.WinFormsIoC.Presentation.Place
 
         private async void FrmPlaceList_LoadAsync(object sender, EventArgs e)
         {
+            Btn_Evaluate.Text = Strings.BtnEvaluate;
+            BtnEdit.Text = Strings.BtnEdit;
+            BtnNew.Text = Strings.BtnNew;
+
             await FillPlacesAsync();
         }
 

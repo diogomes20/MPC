@@ -42,7 +42,7 @@
             this.BtnSave = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.countryDtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblPais = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.countryDtoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -164,15 +164,15 @@
             // 
             this.countryDtoBindingSource.DataSource = typeof(Mpc.WinFormsIoC.Application.Dto.CountryDto);
             // 
-            // label1
+            // LblPais
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 143);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "País";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.LblPais.AutoSize = true;
+            this.LblPais.Location = new System.Drawing.Point(62, 143);
+            this.LblPais.Name = "LblPais";
+            this.LblPais.Size = new System.Drawing.Size(29, 13);
+            this.LblPais.TabIndex = 12;
+            this.LblPais.Text = "País";
+            this.LblPais.Click += new System.EventHandler(this.label1_Click);
             // 
             // FrmUserEdit
             // 
@@ -180,7 +180,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(377, 215);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LblPais);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.LblEmail);
@@ -219,6 +219,6 @@
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource countryDtoBindingSource;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblPais;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Mpc.WinFormsIoC.Application.Dto;
 using Mpc.WinFormsIoC.Application.Services.Reviews;
+using Mpc.WinFormsIoC.Presentation.Assets.Strings;
 using Mpc.WinFormsIoC.Presentation.Core;
 using Mpc.WinFormsIoC.Presentation.Core.Helpers;
 using System;
@@ -29,6 +30,8 @@ namespace Mpc.WinFormsIoC.Presentation.Review
 
         private async void FrmReviewList_Load(object sender, EventArgs e)
         {
+            BtnOpen.Text = Strings.BtnOpenReview;
+
             await FillUsersAsync();
         }
 
